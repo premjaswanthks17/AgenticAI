@@ -1,0 +1,243 @@
+PORTFOLIO RISK MANAGEMENT – CONCEPTS AND FRAMEWORKS
+Source: Industry Best Practices, CFA Institute, NSE Academy
+Last Updated: 2024
+
+=============================================================================
+SECTION 1: UNDERSTANDING PORTFOLIO RISK
+=============================================================================
+
+TOTAL RISK DECOMPOSITION
+--------------------------
+Total Portfolio Risk = Systematic Risk + Unsystematic Risk
+
+1. Systematic Risk (Market Risk / Beta Risk)
+   - Affects all securities in the market.
+   - Caused by: macroeconomic changes, interest rate moves, inflation,
+     geopolitical events, global crises.
+   - Cannot be eliminated by diversification.
+   - Measured by BETA.
+
+2. Unsystematic Risk (Idiosyncratic / Specific Risk)
+   - Unique to a specific company or industry.
+   - Caused by: earnings miss, management scandal, product recall, labour strike.
+   - Can be significantly reduced by holding 15–20 uncorrelated stocks.
+
+=============================================================================
+SECTION 2: RISK MEASUREMENT TOOLS
+=============================================================================
+
+STANDARD DEVIATION (Volatility)
+---------------------------------
+Standard deviation of returns measures how much the portfolio's returns
+deviate from its mean. Expressed as annualised percentage.
+
+Interpretation Guide (Indian Equities):
+  < 12%  → Very low risk (large-cap defensive)
+  12–20% → Low to moderate risk (Nifty 50 typical range)
+  20–30% → Moderate to high risk (mid-cap)
+  > 30%  → High risk (small-cap, cyclical, sectoral bets)
+
+Formula:
+  σ_annual = σ_daily × √252   (252 = trading days in a year)
+
+VALUE AT RISK (VaR)
+--------------------
+VaR estimates the maximum expected loss over a given time horizon at a
+specified confidence level.
+
+Example: A 1-day 95% VaR of ₹50,000 means there is a 5% chance that the
+portfolio will lose more than ₹50,000 in a single trading day.
+
+Methods: Historical simulation, Parametric (assuming normal distribution),
+Monte Carlo simulation.
+
+MAXIMUM DRAWDOWN
+-----------------
+Maximum peak-to-trough decline in portfolio value over a historical period.
+A drawdown of -40% means the portfolio once fell 40% from its peak before recovering.
+
+A lower maximum drawdown (e.g., -15% vs. -40%) indicates a more resilient portfolio.
+
+=============================================================================
+SECTION 3: DIVERSIFICATION PRINCIPLES
+=============================================================================
+
+MODERN PORTFOLIO THEORY (MPT) – Markowitz Framework
+-----------------------------------------------------
+Harry Markowitz (1952) showed that combining assets with imperfect correlation
+reduces portfolio volatility without proportionally reducing expected return.
+
+Key insight: Investors should seek the "efficient frontier" – portfolios that
+maximise return for a given level of risk.
+
+CORRELATION COEFFICIENT
+------------------------
+Ranges from -1.0 (perfect negative correlation) to +1.0 (perfect positive).
+- Correlation of +1.0: assets move perfectly together; no diversification benefit.
+- Correlation of 0: assets are uncorrelated; maximum diversification benefit.
+- Correlation of -1.0: perfect hedge; risk can be eliminated entirely.
+
+In practice, Indian equity sectors show correlation of 0.3–0.7 during normal
+markets, and correlations rise sharply (toward 1.0) during market crashes.
+
+SECTOR DIVERSIFICATION (INDIA)
+-------------------------------
+NSE classifies Indian stocks into the following broad sectors:
+  - Financial Services (Banks, NBFCs, Insurance)
+  - Information Technology
+  - Healthcare / Pharmaceuticals
+  - Consumer Goods (FMCG)
+  - Energy (Oil & Gas, Power)
+  - Automobile & Auto Components
+  - Capital Goods / Infrastructure
+  - Metals & Mining
+  - Real Estate
+  - Telecom
+
+A well-diversified portfolio spans at least 5–7 of these sectors.
+
+=============================================================================
+SECTION 4: PORTFOLIO PERFORMANCE METRICS
+=============================================================================
+
+SHARPE RATIO
+-------------
+Sharpe Ratio = (Portfolio Return − Risk-Free Rate) / Portfolio Standard Deviation
+
+Risk-free rate in India ≈ 10-year Government Bond Yield ≈ 6.5–7.0% (2024).
+
+Interpretation:
+  < 0   → Underperforming risk-free investment
+  0–1   → Acceptable but suboptimal
+  1–2   → Good risk-adjusted performance
+  > 2   → Excellent; difficult to sustain long-term
+
+TREYNOR RATIO
+-------------
+Treynor Ratio = (Portfolio Return − Risk-Free Rate) / Portfolio Beta
+
+Unlike Sharpe, Treynor uses systematic risk (beta) as the denominator.
+Useful when comparing portfolios that are part of a larger, diversified fund.
+
+JENSEN'S ALPHA
+--------------
+Alpha = Portfolio Return − [Risk-Free Rate + Beta × (Market Return − Risk-Free Rate)]
+
+Positive alpha means the portfolio outperformed what its beta would predict.
+Negative alpha means underperformance. Active fund managers are judged on alpha.
+
+INFORMATION RATIO
+-----------------
+IR = (Portfolio Return − Benchmark Return) / Tracking Error
+
+Tracking Error = standard deviation of (portfolio return − benchmark return).
+IR > 0.5 is considered good for active fund managers.
+
+=============================================================================
+SECTION 5: CONCENTRATION RISK AND HHI
+=============================================================================
+
+HERFINDAHL-HIRSCHMAN INDEX (HHI) FOR PORTFOLIOS
+-------------------------------------------------
+HHI = Σ (w_i)²   where w_i is the weight of stock i in the portfolio.
+
+Ranges from 1/N (perfectly equal weights) to 1.0 (100% in one stock).
+
+Thresholds (portfolio context):
+  HHI > 0.25  → Highly concentrated; single-stock risk dominates.
+  0.15–0.25   → Moderately concentrated; consider rebalancing.
+  < 0.15      → Adequately diversified for most retail investors.
+
+Example:
+  Portfolio A: [40%, 30%, 30%] → HHI = 0.16² + 0.30² + 0.30² = 0.34 → Concentrated
+  Wait: 0.4² + 0.3² + 0.3² = 0.16 + 0.09 + 0.09 = 0.34 → Highly concentrated
+  Portfolio B: [20%, 20%, 20%, 20%, 20%] → HHI = 5 × 0.04 = 0.20 → Moderate
+  Portfolio C: 10 equal positions → HHI = 0.10 → Well diversified
+
+=============================================================================
+SECTION 6: RISK MANAGEMENT BEST PRACTICES
+=============================================================================
+
+POSITION SIZING RULES
+----------------------
+  1. No single stock should exceed 10–15% of portfolio for retail investors.
+  2. No single sector should exceed 30–35%.
+  3. The top 3 positions combined should not exceed 50%.
+
+STOP-LOSS DISCIPLINE
+--------------------
+Setting a predetermined exit price (stop-loss) limits downside in individual
+positions. Common approaches:
+  - Fixed percentage stop (e.g., exit if stock falls 15% from entry).
+  - Trailing stop (moves up as price rises, protecting gains).
+Note: Stop-losses protect capital but may result in selling during temporary dips.
+
+REBALANCING TRIGGERS
+--------------------
+  - Calendar rebalancing: Quarterly or annually.
+  - Threshold rebalancing: When any position drifts more than 5% from target.
+  - Event-driven: After major corporate actions or macroeconomic shifts.
+
+LIQUIDITY MANAGEMENT
+--------------------
+Maintain a cash buffer of 5–10% of the portfolio for:
+  - Buying opportunities during market corrections.
+  - Emergency withdrawals without forced selling.
+  - Transaction costs and taxes.
+
+=============================================================================
+SECTION 7: BEHAVIOURAL BIASES IN INVESTING
+=============================================================================
+
+LOSS AVERSION
+-------------
+Investors feel the pain of losses roughly twice as strongly as the pleasure
+of equivalent gains (Kahneman & Tversky). This leads to holding losing stocks
+too long (hoping for recovery) and selling winning stocks too soon.
+
+OVERCONFIDENCE BIAS
+-------------------
+Retail investors often overestimate their ability to predict stock movements.
+Studies show that active retail traders, on average, underperform index funds
+after accounting for transaction costs.
+
+HERD MENTALITY
+--------------
+Following the crowd into popular stocks, especially after strong price rises,
+often results in buying at the peak. Remember: "Buying what has risen most
+recently" is NOT a strategy.
+
+RECENCY BIAS
+------------
+Overweighting recent performance (positive or negative) when making forecasts.
+A stock that has risen 100% in the past year is not guaranteed to continue rising.
+
+ANCHORING
+---------
+Fixating on a specific price (e.g., the price you paid) when evaluating
+whether to hold or exit. Investment decisions should be forward-looking.
+
+=============================================================================
+SECTION 8: TAX IMPLICATIONS (INDIA, AS OF 2024)
+=============================================================================
+
+SHORT-TERM CAPITAL GAINS (STCG)
+--------------------------------
+Equity held for less than 12 months: taxed at 15% (flat).
+
+LONG-TERM CAPITAL GAINS (LTCG)
+-------------------------------
+Equity held for more than 12 months:
+  - Gains up to ₹1 lakh per financial year: Exempt.
+  - Gains above ₹1 lakh: Taxed at 10% without indexation.
+
+DIVIDEND INCOME
+---------------
+Dividends are taxable in the hands of the investor as per their income slab
+(no longer tax-free as of FY 2020-21).
+
+SECURITIES TRANSACTION TAX (STT)
+---------------------------------
+Charged on every purchase/sale of equity shares and derivatives.
+Equity delivery purchase: 0.1%; Equity delivery sale: 0.1%.
+Futures sale: 0.01%; Options sale: 0.05%.

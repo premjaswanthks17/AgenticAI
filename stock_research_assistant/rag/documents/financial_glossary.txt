@@ -1,0 +1,226 @@
+FINANCIAL GLOSSARY FOR RETAIL INVESTORS
+Source: Adapted from SEBI Investor Education and NSE Knowledge Center
+Last Updated: 2024
+
+=============================================================================
+VALUATION RATIOS
+=============================================================================
+
+P/E RATIO (Price-to-Earnings Ratio)
+------------------------------------
+Definition: The P/E ratio measures how much investors are willing to pay
+per rupee of a company's earnings. It is calculated as:
+  P/E = Market Price per Share / Earnings per Share (EPS)
+
+Interpretation:
+- A high P/E (e.g., above 30) suggests the market expects strong future
+  growth, or the stock may be overvalued relative to current earnings.
+- A low P/E (e.g., below 15) may indicate undervaluation or that the
+  company faces challenges.
+- P/E must always be compared against the industry average and historical
+  range—not in isolation.
+- For Indian IT sector, P/E ratios of 20–35 are historically common.
+- For banking sector, P/E is often lower (10–20) due to capital-intensity.
+
+P/B RATIO (Price-to-Book Ratio)
+--------------------------------
+Definition: P/B = Market Price per Share / Book Value per Share
+Book Value = Total Assets − Total Liabilities
+
+Interpretation:
+- A P/B below 1 can mean the market values the company below its net assets,
+  which may indicate distress or deep value.
+- Asset-heavy industries (banking, infrastructure) typically have lower P/B.
+- Technology firms often have high P/B because their value lies in intangibles.
+
+EV/EBITDA (Enterprise Value to EBITDA)
+----------------------------------------
+Definition: EV/EBITDA = Enterprise Value / Earnings Before Interest, Taxes,
+Depreciation and Amortisation
+
+- Useful for comparing companies with different capital structures.
+- Lower EV/EBITDA generally implies cheaper valuation.
+- Indian large-cap benchmark: ~12–18x for manufacturing; ~20–30x for tech.
+
+=============================================================================
+PROFITABILITY METRICS
+=============================================================================
+
+ROE (Return on Equity)
+-----------------------
+Definition: ROE = Net Income / Shareholders' Equity × 100
+
+- Measures how efficiently a company uses shareholder funds to generate profit.
+- ROE above 15% is generally considered good for Indian large-caps.
+- Consistently high ROE (>20%) over 5+ years signals a strong competitive moat.
+- Beware of high ROE driven by excessive debt (leverage), not operational excellence.
+
+ROA (Return on Assets)
+-----------------------
+Definition: ROA = Net Income / Total Assets × 100
+
+- Shows how efficiently the company uses its asset base.
+- Above 10% is excellent; below 5% may signal inefficiency or heavy capex.
+
+NET PROFIT MARGIN
+-----------------
+Definition: Net Profit Margin = Net Profit / Revenue × 100
+
+- Higher margin = more profit retained from each rupee of revenue.
+- Indian IT companies typically have margins of 18–25%.
+- FMCG companies: 10–18%; Automotive: 5–10%; Banking uses NIM instead.
+
+=============================================================================
+DEBT & LIQUIDITY
+=============================================================================
+
+DEBT-TO-EQUITY RATIO (D/E)
+---------------------------
+Definition: D/E = Total Debt / Shareholders' Equity
+
+- Shows the relative proportion of debt and equity used to finance assets.
+- D/E below 0.5 is considered conservative.
+- D/E above 2.0 in non-financial sectors raises concern about solvency.
+- Banks and NBFCs are exempt—their business model requires high leverage.
+
+CURRENT RATIO
+-------------
+Definition: Current Ratio = Current Assets / Current Liabilities
+
+- Measures short-term liquidity.
+- A ratio above 1.5 is generally comfortable; below 1.0 signals potential
+  difficulty meeting short-term obligations.
+
+FREE CASH FLOW (FCF)
+--------------------
+Definition: FCF = Operating Cash Flow − Capital Expenditure
+
+- Positive and growing FCF is a strong indicator of financial health.
+- Companies with high FCF can fund dividends, buybacks or expansion without
+  relying on external debt.
+
+=============================================================================
+GROWTH METRICS
+=============================================================================
+
+REVENUE GROWTH (Year-on-Year)
+------------------------------
+Consistent revenue growth above GDP growth rate (typically >10% for India)
+indicates market-share gains or strong demand.
+
+EPS GROWTH
+----------
+Earnings per Share growth is watched closely by the market. Sustained
+double-digit EPS growth over 5 years usually commands a premium valuation.
+
+=============================================================================
+DIVIDEND METRICS
+=============================================================================
+
+DIVIDEND YIELD
+--------------
+Definition: Dividend Yield = Annual Dividend per Share / Market Price × 100
+
+- A yield of 1–3% is typical for Indian blue-chips.
+- Very high yield (>6%) may signal a falling stock price rather than
+  generosity—examine the reason carefully.
+
+PAYOUT RATIO
+------------
+Definition: Payout Ratio = Dividends Paid / Net Income × 100
+
+- Low payout ratio (<30%) suggests the company reinvests most profits—common
+  in growth companies.
+- High payout (>70%) is typical for mature, cash-generative businesses.
+
+=============================================================================
+UNDERSTANDING FINANCIAL STATEMENTS
+=============================================================================
+
+INCOME STATEMENT (P&L)
+-----------------------
+Shows revenue, expenses and profit over a period.
+Key line items: Revenue → Gross Profit → EBITDA → EBIT → PAT (Profit After Tax)
+
+BALANCE SHEET
+-------------
+A snapshot of assets, liabilities and equity on a specific date.
+Assets = Liabilities + Shareholders' Equity
+
+CASH FLOW STATEMENT
+-------------------
+Tracks actual cash in-flows and out-flows.
+Three sections:
+  1. Operating cash flow  – from core business
+  2. Investing cash flow  – capex, acquisitions
+  3. Financing cash flow  – debt raised/repaid, dividends
+
+=============================================================================
+RISK CONCEPTS
+=============================================================================
+
+BETA (Market Risk)
+------------------
+Beta measures a stock's sensitivity to broad market movements.
+- Beta = 1.0: moves in line with the market (e.g., Nifty 50).
+- Beta > 1.0: more volatile than the market (e.g., small-caps, tech startups).
+- Beta < 1.0: less volatile (e.g., utilities, FMCG).
+- Beta < 0: moves opposite to the market (rare; e.g., gold-linked equities).
+
+VOLATILITY (Standard Deviation)
+---------------------------------
+Annualised volatility of returns measures the degree of price fluctuation.
+- Low volatility (<15% annualised): stable, defensive stocks.
+- Medium (15–25%): typical large-cap Indian equities.
+- High (>30%): small-caps, cyclical sectors.
+
+CONCENTRATION RISK
+------------------
+A portfolio heavily weighted in one stock, sector or geography is said to
+have high concentration risk. The Herfindahl–Hirschman Index (HHI) is
+commonly used to measure concentration:
+  HHI = Σ(weight_i²)
+- HHI > 0.25: highly concentrated.
+- HHI 0.15–0.25: moderately concentrated.
+- HHI < 0.15: well-diversified.
+
+CORRELATION & DIVERSIFICATION
+------------------------------
+Holding assets that are not perfectly correlated reduces overall portfolio
+volatility. True diversification means spreading across different sectors,
+market caps and asset classes—not just buying multiple stocks in the same sector.
+
+SHARPE RATIO
+------------
+Sharpe Ratio = (Portfolio Return − Risk-Free Rate) / Portfolio Volatility
+
+- A Sharpe ratio above 1.0 is generally considered good.
+- Above 2.0 is excellent; below 0 means the portfolio underperformed risk-free assets.
+- In India, the risk-free rate is approximated by the 10-year Government Bond yield
+  (~6.5–7% as of 2024).
+
+=============================================================================
+SECTOR-SPECIFIC NOTES (INDIAN MARKET)
+=============================================================================
+
+IT SECTOR (TCS, Infosys, Wipro, HCL Tech)
+- Revenues largely USD-denominated; rupee depreciation benefits exporters.
+- Key metric: Revenue in constant currency, EBIT margin, employee headcount growth.
+- Typical P/E: 22–32x; ROE: 25–40%.
+
+BANKING & FINANCIAL SERVICES (HDFC Bank, ICICI Bank, Axis Bank, Kotak)
+- Use NIM (Net Interest Margin), GNPA (Gross Non-Performing Assets %),
+  CASA ratio (Current Account Savings Account), and CAR (Capital Adequacy Ratio).
+- High D/E is normal; focus on asset quality instead.
+
+ENERGY & OIL (Reliance Industries, ONGC, IOC)
+- Affected by global crude prices, INR/USD, and government pricing policies.
+- Monitor refining margins, petchem volumes and new-energy investments.
+
+AUTOMOBILE (Tata Motors, Maruti, M&M, Bajaj Auto)
+- Key metrics: Volume growth, EBITDA margin, EV transition capex.
+- Cyclical sector—earnings highly sensitive to economic cycles.
+
+FMCG (HUL, Nestle, Dabur, Britannia)
+- Defensive sector; relatively stable during downturns.
+- Monitor volume growth vs. price-led growth; rural vs. urban split.

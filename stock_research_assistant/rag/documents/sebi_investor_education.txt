@@ -1,0 +1,237 @@
+SEBI INVESTOR EDUCATION – GUIDE TO SAFE INVESTING IN INDIAN MARKETS
+Source: Securities and Exchange Board of India (SEBI) Investor Education
+Reference: https://investor.sebi.gov.in
+Last Updated: 2024
+
+=============================================================================
+1. ABOUT SEBI AND ITS ROLE
+=============================================================================
+
+The Securities and Exchange Board of India (SEBI) is the statutory regulator
+for the securities and commodity markets in India. Its core mandate is:
+  (a) Protecting the interests of investors in securities.
+  (b) Promoting the development of the securities market.
+  (c) Regulating the securities market.
+
+All listed companies, stock brokers, depositories, mutual funds, and portfolio
+managers must be registered with and regulated by SEBI.
+
+=============================================================================
+2. HOW INDIAN STOCK MARKETS WORK
+=============================================================================
+
+PRIMARY MARKET
+--------------
+Companies raise fresh capital by issuing shares to the public for the first
+time through an Initial Public Offering (IPO) or via Follow-on Public Offers
+(FPO) and Rights Issues.
+
+SECONDARY MARKET
+----------------
+After listing, shares are traded on stock exchanges:
+- National Stock Exchange (NSE) – benchmark index: Nifty 50.
+- Bombay Stock Exchange (BSE) – benchmark index: SENSEX (S&P BSE Sensex, 30 stocks).
+
+TRADING HOURS: 9:15 AM to 3:30 PM IST, Monday–Friday (excluding market holidays).
+
+SETTLEMENT: India follows T+1 settlement (trade date plus 1 working day).
+
+DEPOSITORIES: NSDL (National Securities Depository Ltd) and CDSL
+  (Central Depository Services Ltd) hold shares in dematerialised (demat) form.
+
+=============================================================================
+3. TYPES OF SECURITIES
+=============================================================================
+
+EQUITY SHARES
+-------------
+Represent ownership in a company. Equity shareholders bear the highest risk
+but also enjoy the highest potential return through capital appreciation and
+dividends. Equity investors rank last in case of insolvency.
+
+PREFERENCE SHARES
+-----------------
+Carry a fixed dividend and rank above equity in a liquidation, but usually
+lack voting rights. Hybrid between equity and debt.
+
+BONDS / DEBENTURES
+------------------
+Debt instruments where the company promises to repay principal with interest.
+Government bonds (G-Secs, T-Bills) carry sovereign guarantee; corporate bonds
+carry credit risk (rated by CRISIL, ICRA, CARE, Fitch India).
+
+MUTUAL FUNDS
+------------
+Pool money from many investors and invest in a diversified portfolio managed
+by a professional fund manager. SEBI regulates all mutual funds in India.
+Types: Equity funds, Debt funds, Hybrid funds, Index funds, ETFs.
+
+=============================================================================
+4. KEY RISKS EVERY INVESTOR MUST UNDERSTAND
+=============================================================================
+
+MARKET RISK (Systematic Risk)
+------------------------------
+The risk that the entire market declines due to macroeconomic factors—
+interest rate hikes, inflation, geopolitical events, pandemic, etc.
+Cannot be eliminated through diversification; measured by Beta.
+
+COMPANY-SPECIFIC RISK (Unsystematic Risk)
+------------------------------------------
+Risk specific to an individual company—management fraud, product failure,
+regulatory penalty. Can be reduced by diversifying across companies and sectors.
+
+LIQUIDITY RISK
+--------------
+The risk that you may not be able to sell a security quickly at a fair price.
+Small-cap and mid-cap stocks may have lower trading volumes.
+
+CONCENTRATION RISK
+------------------
+Over-investing in one stock, sector or geography magnifies losses if that
+position underperforms. SEBI advises retail investors to maintain diversified
+portfolios across multiple sectors and asset classes.
+
+INFLATION RISK
+--------------
+Returns must beat inflation to create real wealth. Fixed deposits that earn
+less than inflation erode purchasing power.
+
+CURRENCY RISK
+-------------
+Relevant for investors in companies with significant USD revenues or USD costs,
+or for direct foreign investment.
+
+=============================================================================
+5. FUNDAMENTAL ANALYSIS – SEBI'S RECOMMENDED APPROACH
+=============================================================================
+
+SEBI encourages retail investors to perform fundamental analysis before
+investing in any company. Key steps:
+
+Step 1: Understand the Business
+- What does the company do? Who are its customers?
+- What is its competitive advantage (moat)?
+
+Step 2: Read the Annual Report
+- Board of Directors' Report, Management Discussion & Analysis (MD&A),
+  Auditor's Report, and Financial Statements.
+- Download free from BSE (bseindia.com) or NSE (nseindia.com).
+
+Step 3: Analyse Financial Ratios
+- Profitability: ROE, ROA, EBITDA margin.
+- Valuation: P/E, P/B, EV/EBITDA.
+- Debt: D/E ratio, interest coverage, current ratio.
+- Cash generation: Free Cash Flow.
+
+Step 4: Compare with Peers
+- Never evaluate a company in isolation; compare against industry peers
+  and historical averages.
+
+Step 5: Check Corporate Governance
+- Independent directors, promoter pledging of shares, related-party transactions.
+- Companies with high promoter pledging carry elevated risk.
+
+=============================================================================
+6. PORTFOLIO CONSTRUCTION PRINCIPLES
+=============================================================================
+
+ASSET ALLOCATION
+----------------
+Allocate investments across asset classes (equity, debt, gold, real estate)
+based on your risk tolerance, investment horizon and financial goals.
+
+Rule of thumb for equity allocation: (100 − Age)% in equity.
+Example: A 30-year-old investor may allocate 70% to equity.
+
+DIVERSIFICATION
+---------------
+Spread across:
+  - At least 8–15 stocks to eliminate unsystematic risk.
+  - Multiple sectors (IT, banking, FMCG, pharma, infrastructure).
+  - Different market caps (large-cap, mid-cap, small-cap).
+
+REBALANCING
+-----------
+Periodically (at least annually) rebalance the portfolio to the original
+target allocation if any position has drifted significantly.
+
+SYSTEMATIC INVESTMENT PLAN (SIP)
+---------------------------------
+Invest a fixed amount regularly (monthly) rather than timing the market.
+SIP in mutual funds/ETFs benefits from rupee-cost averaging and compounding.
+
+=============================================================================
+7. INVESTOR RIGHTS
+=============================================================================
+
+Every retail investor registered with a SEBI-regulated broker has the right to:
+  1. Receive a Contract Note for every trade executed.
+  2. Access holding statements from depositories (NSDL/CDSL).
+  3. File a complaint on SEBI's SCORES portal (scores.sebi.gov.in).
+  4. Participate in shareholder meetings (AGM/EGM) and vote on resolutions.
+  5. Receive dividends, bonus shares and rights in a timely manner.
+
+=============================================================================
+8. RED FLAGS – WARNING SIGNS FOR INVESTORS
+=============================================================================
+
+  ⚠ Unsolicited tips via WhatsApp, Telegram, SMS or social media.
+  ⚠ Guaranteed returns above bank FD rates.
+  ⚠ Requests to transfer funds to unregistered entities.
+  ⚠ Promoter stake continuously declining (insider selling).
+  ⚠ High and increasing promoter share pledging.
+  ⚠ Auditor qualifications or resignation without clear explanation.
+  ⚠ Persistent negative operating cash flow despite reported profit.
+  ⚠ Frequent change of auditors or CFO.
+  ⚠ Related-party transactions of unusual size or frequency.
+
+=============================================================================
+9. COMMONLY USED INDIAN MARKET INDICES
+=============================================================================
+
+NIFTY 50 (NSE)
+--------------
+Tracks 50 large-cap stocks across 13 sectors. Widely used as the benchmark
+for Indian equity performance. Managed by NSE Indices Ltd.
+Ticker on NSE: ^NSEI
+
+BSE SENSEX
+----------
+Tracks 30 large and financially sound companies listed on BSE.
+One of the oldest indices in Asia (since 1986). Ticker: ^BSESN
+
+NIFTY NEXT 50: The next 50 stocks after Nifty 50 by free-float market cap.
+NIFTY MIDCAP 150: Mid-cap segment benchmark.
+NIFTY SMALLCAP 250: Small-cap segment benchmark.
+NIFTY BANK: Tracks the most liquid banking stocks.
+NIFTY IT: Tracks IT sector performance.
+
+=============================================================================
+10. HOW TO READ AN NSE/BSE TICKER
+=============================================================================
+
+Indian stocks are traded on NSE with symbols like:
+  - TCS      → Tata Consultancy Services
+  - INFY     → Infosys Limited
+  - HDFCBANK → HDFC Bank Limited
+  - RELIANCE → Reliance Industries Limited
+  - TATAMOTORS → Tata Motors Limited
+
+When using financial data tools, append ".NS" for NSE or ".BO" for BSE:
+  - TCS.NS, INFY.NS, HDFCBANK.NS, RELIANCE.NS
+
+ADRs (American Depositary Receipts) for Indian companies on NYSE/NASDAQ:
+  - INFY (Infosys ADR), WIT (Wipro ADR), HDB (HDFC Bank ADR)
+
+=============================================================================
+11. DISCLAIMER FROM SEBI
+=============================================================================
+
+"Securities investments are subject to market risks. Read all scheme-related
+documents carefully. Past performance is not indicative of future results.
+SEBI does not guarantee any returns. Investors are advised to consult their
+financial advisor before making investment decisions."
+
+For queries and complaints: https://investor.sebi.gov.in | Toll-free: 1800-266-7575
+SCORES portal for complaints: https://scores.sebi.gov.in
