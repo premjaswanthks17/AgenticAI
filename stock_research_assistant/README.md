@@ -1,160 +1,114 @@
 # 📊 Stock Research & Portfolio Assistant
 
-**Domain:** Finance  
-**Framework:** LangGraph + Model Context Protocol (MCP) + RAG Knowledge Base + Streamlit UI
+**An AgenticAI Capstone Project**  
+*Built with LangGraph, Google Gemini, Model Context Protocol (MCP), and Streamlit*
 
-An intelligent, multi-agent financial research assistant that analyzes individual stocks and custom investment portfolios across fundamental financial metrics, news sentiment, and risk parameters. Designed specifically for retail investors, finance students, and investment club members to promote objective, educational research.
+This project is a multi-agent AI financial assistant designed to help retail investors and finance students analyze stocks and portfolios. Instead of just giving a single LLM a prompt, this application uses a **LangGraph-orchestrated team of 6 specialized AI agents**. They work together to gather real-time data, fetch news sentiment, calculate portfolio risk, and retrieve educational concepts—ultimately synthesizing everything into a clean, easy-to-read, and strictly educational research report.
 
 ---
 
-## 🏗️ System Architecture & Workflow
+## 🌟 What I Have Built
+
+I developed a full-stack AI pipeline that solves complex financial queries through specialized agent delegation. Here is what the system does under the hood:
+
+1. **Intelligent Routing (Supervisor):** When you type a query, the system doesn't just guess what you want. A Supervisor Agent analyzes your intent, extracts stock tickers or portfolio weights, and routes the task to the exact agents needed.
+2. **Real-time Financial Data (MCP):** Using the Model Context Protocol, the Fundamental Agent pulls live market prices, historical data, and financial ratios dynamically.
+3. **Live Web & News Sentiment:** The Sentiment Agent uses the Tavily Search API to scan the internet for the most recent news about a stock and summarizes the market's current mood.
+4. **Custom Portfolio Risk Calculation:** If you provide a portfolio (e.g., 40% TCS, 60% Reliance), the Risk Agent calculates actual risk metrics like Beta and annualized volatility based on your specific weights.
+5. **RAG Knowledge Base:** I implemented a local Vector Store using FAISS. If you ask a conceptual question (e.g., "What is a P/E ratio?"), the RAG Agent answers using verified educational documents rather than hallucinating.
+6. **Safe & Compliant Reporting:** The final Report Agent gathers all the data, formats it beautifully in Markdown, and applies strict guardrails (using Regex) to prevent the AI from giving illegal "Buy" or "Sell" advice.
+
+---
+
+## 🏗️ System Architecture Workflow
 
 ```mermaid
 flowchart TD
-    User([👤 User Query]) --> Supervisor[🧠 Supervisor Agent]
+    User["👤 User Query"] --> Supervisor["🧠 Supervisor Agent"]
     
-    Supervisor -->|Conceptual Question| RAGNode[📚 RAG Knowledge Base Direct]
-    Supervisor -->|Parallel Branching| Fundamental[📈 Fundamental Agent]
-    Supervisor -->|Parallel Branching| Sentiment[📰 Sentiment Agent]
-    Supervisor -->|Parallel Branching| Risk[⚡ Risk Agent]
+    Supervisor -->|"Conceptual Question"| RAGNode["📚 RAG Knowledge Base"]
+    Supervisor -->|"Fundamental Analysis"| Fundamental["📈 Fundamental Agent"]
+    Supervisor -->|"News & Events"| Sentiment["📰 Sentiment Agent"]
+    Supervisor -->|"Portfolio Math"| Risk["⚡ Risk Agent"]
 
-    subgraph MCP ["🔌 MCP Server Tools"]
-        get_price["get_price(ticker)"]
-        get_financials["get_financials(ticker)"]
-        calc_portfolio_risk["calc_portfolio_risk(holdings)"]
+    subgraph MCPTools ["🔌 External Tools"]
+        MCP["MCP Server (Prices, Financials)"]
+        Tavily["Tavily Web Search"]
     end
 
-    Fundamental --> get_financials
-    Fundamental --> get_price
-    Risk --> calc_portfolio_risk
-    Sentiment --> Tavily[🌐 Tavily News API / Web Search]
+    Fundamental -.->|"Fetches Data"| MCP
+    Risk -.->|"Fetches Data"| MCP
+    Sentiment -.->|"Searches News"| Tavily
 
-    Fundamental --> Report[📑 Report Agent]
+    Fundamental --> Report["📑 Report Agent"]
     Sentiment --> Report
     Risk --> Report
     RAGNode --> Report
 
-    Report --> Sanitize{🛡️ Guardrail Check}
-    Sanitize --> UI[💻 Streamlit Interactive Research Note UI]
+    Report --> Sanitize{"🛡️ Guardrail Filter"}
+    Sanitize --> UI["💻 Streamlit Dashboard"]
 ```
-
----
-
-## 🌟 Key Features & Highlights
-
-### 🤖 Multi-Agent Orchestration (LangGraph):
-* **Supervisor Agent**: Parses user queries, detects intent (single stock, portfolio risk, sentiment, or conceptual RAG), extracts ticker symbols and portfolio weight percentages.
-* **Fundamental Agent**: Leverages MCP server tools to pull key financial metrics (P/E ratio, P/B ratio, D/E ratio, ROE, revenue growth) and interprets them in educational context.
-* **Sentiment Agent**: Gathers news announcements via Tavily Search / market feeds and classifies overall news sentiment with verifiable evidence snippets.
-* **Risk Agent**: Computes portfolio weighted Beta, annualized volatility, Herfindahl-Hirschman Index (HHI) concentration risk, and risk ratings.
-* **Report Agent**: Synthesizes all parallel branch findings into a balanced, educational research note with required guardrail disclaimers.
-
-### 🔌 Model Context Protocol (MCP) Tools:
-* `get_price`: Retrieves current market price, 52-week high/low, and 60-day price history.
-* `get_financials`: Returns fundamental valuation ratios, margin trends, debt leverage, and capital efficiency.
-* `calc_portfolio_risk`: Calculates weighted beta, estimated annualized volatility, concentration index, and risk rating for custom holding weights.
-
-### 📖 RAG Knowledge Base:
-Built-in educational repository based on SEBI Investor Education materials, BSE/NSE financial literacy guides, and financial term glossaries. Answers conceptual questions directly (e.g. *"What does a P/E ratio of 35 mean?"*).
-
-### 🛡️ Strict Regulatory Guardrails:
-* **Never** provides "buy", "sell", or price target recommendations.
-* States the exact reference date of all historical data used.
-* Appends mandatory SEBI-compliant educational disclaimers to every research note.
-
-### 🖥️ Simple & Neat Interactive Web UI:
-* Clean, light-mode interface powered by Streamlit.
-* Sidebar configuration for API Keys (Gemini & Tavily).
-* Interactive markdown research reports with one-click `.md` download.
 
 ---
 
 ## 📁 Repository Structure
+
 ```text
 .
-├── agents/
-│   ├── __init__.py
-│   ├── supervisor.py       # Intent classification & ticker extraction
-│   ├── fundamental.py      # MCP financial statement analysis node
-│   ├── sentiment.py        # Tavily news & sentiment classification node
-│   ├── risk.py             # Portfolio risk calculation node
-│   └── report.py           # Report compilation & guardrail verification node
-├── data/
-│   └── financial_glossary.json  # RAG knowledge base document store
-├── mcp_server/
-│   ├── __init__.py
-│   ├── tools.py            # MCP tools (get_price, get_financials, calc_portfolio_risk)
-│   └── server.py           # FastMCP / standard MCP server entrypoint
-├── rag/
-│   ├── __init__.py
-│   └── knowledge_base.py   # RAG vector / keyword retrieval engine
-├── .env.example            # Environment variables template
-├── .gitignore              # Git ignore rules
-├── README.md               # Documentation & setup guide
-├── app.py                  # Streamlit web application frontend
-├── config.py               # Configuration & default models (gemini-flash-lite)
-└── requirements.txt        # Python package dependencies
+├── agents/                 # The 6 LangGraph specialized agents
+│   ├── supervisor.py       
+│   ├── fundamental_agent.py      
+│   ├── sentiment_agent.py        
+│   ├── risk_agent.py             
+│   └── report_agent.py           
+├── mcp_server/             # Model Context Protocol integration
+│   ├── stock_mcp_server.py # Provides get_price, get_financials, etc.
+├── rag/                    # Retrieval-Augmented Generation
+│   ├── documents/          # Educational texts and glossaries
+│   └── vectorstore/        # FAISS index for fast retrieval
+├── app.py                  # The Streamlit web interface
+├── config.py               # Global settings and LLM configuration
+├── graph/                  # LangGraph state and orchestrator
+└── requirements.txt        # Python dependencies
 ```
 
 ---
 
-## 🚀 Quickstart & Setup Guide
+## 🚀 How to Run the Project Locally
 
-### 1. Prerequisites
-* Python 3.10+ (Tested on Python 3.13)
-* Git
-
-### 2. Clone & Install Dependencies
+### 1. Install Dependencies
+Make sure you have Python 3.10+ installed. Clone the repository and install the requirements:
 ```bash
-# Clone repository
-git clone <repository_url>
-cd Project
-
-# Install dependencies
+git clone https://github.com/premjaswanthks17/AgenticAI.git
+cd AgenticAI/stock_research_assistant
 pip install -r requirements.txt
 ```
 
-### 3. Environment Configuration (Optional)
-Copy `.env.example` to `.env` and provide your API keys if real-time web search or LLM API keys are desired:
-
-```bash
-cp .env.example .env
-```
-*(Note: The Streamlit app UI now allows you to paste the Gemini and Tavily API keys directly in the sidebar for ease of use.)*
-
-### 4. Running the Application
-Launch Streamlit Web UI:
+### 2. Launch the Application
+Run the Streamlit interface:
 ```bash
 streamlit run app.py
 ```
-Open your browser at `http://localhost:8501` to access the interactive dashboard.
 
-Run FastMCP Server (Standalone MCP Protocol Mode):
-```bash
-python mcp_server/server.py
-```
-
----
-
-## 🎯 Sample User Queries Supported
-
-| Query Type | Sample Input | Target Agents Executed |
-| :--- | :--- | :--- |
-| **Single Stock Research** | *"Give me a research summary of Infosys."* | Supervisor ➔ Fundamental + Sentiment + Risk ➔ Report |
-| **Portfolio Risk** | *"My portfolio is 40% TCS, 30% HDFC Bank and 30% Reliance. How risky is it?"* | Supervisor ➔ Risk + Fundamental + Sentiment ➔ Report |
-| **Conceptual RAG** | *"What does a P/E ratio of 35 mean for this company?"* | Supervisor ➔ RAG Knowledge Base ➔ Report |
-| **News Sentiment** | *"What is the recent news sentiment around Tata Motors?"* | Supervisor ➔ Sentiment + Fundamental ➔ Report |
+### 3. API Keys
+Open `http://localhost:8501` in your browser. You can input your API keys directly into the secure sidebar:
+* **Gemini API Key:** For the core LLM reasoning.
+* **Tavily API Key:** For real-time news search.
 
 ---
 
-## 🛡️ Guardrails and Regulatory Compliance
-This assistant enforces strict educational parameters:
-1. **No Actionable Advice:** The output is programmatically sanitized to avoid buy, sell, or target price instructions.
-2. **Data Transparency:** Every generated report explicitly displays the data reference timestamp.
-3. **Mandatory Disclaimer:** 
-   > *Disclaimer: This research note is strictly for educational and informational purposes only and does not constitute financial advice, investment recommendations, or buy/sell instructions.*
+## 🎯 Example Queries You Can Try
+
+| Intent | Try Asking... |
+| :--- | :--- |
+| **Fundamental Research** | *"Give me a fundamental analysis of TCS."* |
+| **News Sentiment** | *"What is the recent news sentiment around Tata Motors?"* |
+| **Portfolio Risk** | *"My portfolio is 40% TCS, 30% HDFC Bank and 30% Reliance. How risky is it?"* |
+| **Educational (RAG)** | *"What does a P/E ratio of 35 mean for a company?"* |
 
 ---
 
-## 📝 License
-Distributed under the MIT License. Educational research tool project.
+## 🛡️ Educational Guardrails
+This project was built with strict safety parameters for the finance domain:
+* It will **never** generate "Buy", "Sell", or target price recommendations. Any such words generated by the LLM are scrubbed by the final reporting agent.
+* It appends a mandatory disclaimer to every report emphasizing that the tool is for educational purposes only.
