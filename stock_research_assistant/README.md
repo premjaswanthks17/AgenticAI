@@ -99,12 +99,35 @@ Open `http://localhost:8501` in your browser. You can input your API keys direct
 
 ## 🎯 Example Queries You Can Try
 
-| Intent | Try Asking... |
-| :--- | :--- |
-| **Fundamental Research** | *"Give me a fundamental analysis of TCS."* |
-| **News Sentiment** | *"What is the recent news sentiment around Tata Motors?"* |
-| **Portfolio Risk** | *"My portfolio is 40% TCS, 30% HDFC Bank and 30% Reliance. How risky is it?"* |
-| **Educational (RAG)** | *"What does a P/E ratio of 35 mean for a company?"* |
+Here are detailed explanations of the types of queries this AI assistant can handle, along with what happens under the hood when you ask them.
+
+### 1. Fundamental Research
+**Example Query:** *"Give me a fundamental analysis of TCS."*
+* **Concept:** This query evaluates the intrinsic value of a company. It looks at the core financial health of the business rather than just stock price movements.
+* **Under the Hood:** The Supervisor detects a single stock (`TCS`). It wakes up the **Fundamental Agent**, which uses MCP tools to fetch the P/E ratio, market cap, and historical prices. The agent synthesizes this data into a human-readable summary of the company's valuation.
+
+### 2. News Sentiment Analysis
+**Example Query:** *"What is the recent news sentiment around Tata Motors?"*
+* **Concept:** Market prices are heavily driven by public perception and current events. This query analyzes the "mood" of the market regarding a specific stock.
+* **Under the Hood:** The Supervisor routes this to the **Sentiment Agent**. This agent triggers the Tavily Web Search API to scrape live news articles from the past 24-48 hours. It reads the headlines and categorizes the overall sentiment as Bullish, Bearish, or Neutral, providing key bullet points of recent events.
+
+### 3. Portfolio Risk Assessment
+**Example Query:** *"My portfolio is 40% TCS, 30% HDFC Bank and 30% Reliance. How risky is it?"*
+* **Concept:** Modern Portfolio Theory states that risk isn't just about individual stocks, but how they move together. This query assesses the overall volatility of a custom-weighted portfolio.
+* **Under the Hood:** The Supervisor extracts the tickers (`TCS, HDFC, RELIANCE`) and their exact weights (`0.4, 0.3, 0.3`). It sends these to the **Risk Agent**, which calculates the weighted Beta and annualized volatility, telling you if your portfolio is riskier or safer than the broader market.
+
+### 4. Educational Concepts (RAG)
+**Example Query:** *"What does a P/E ratio of 35 mean for a company?"*
+* **Concept:** Sometimes you don't want to analyze a stock, you just want to learn a financial term. 
+* **Under the Hood:** The Supervisor realizes this is a conceptual question and bypasses external APIs entirely. Instead, it wakes up the **RAG Agent**, which performs a vector similarity search across a local, curated database of financial glossaries (using FAISS). It guarantees the definition is accurate and educational.
+
+---
+
+## 💻 Interactive Streamlit Dashboard
+
+The entire agentic pipeline is wrapped in a clean, interactive Streamlit UI. Simply paste your API keys in the sidebar, type your query, and the LangGraph agents will collaborate in the background to generate a comprehensive markdown report that you can instantly download.
+
+![Streamlit UI Screenshot](assets/ui_screenshot.webp)
 
 ---
 
